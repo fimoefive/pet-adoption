@@ -1,5 +1,3 @@
-console.log("pet-adoption");
-
 const pets = [
   {
     name: "Dusty",
@@ -213,76 +211,9 @@ const pets = [
   }
 ];
 
-const printToDom = (divId, textToPrint) => {
-  const selectedDiv = document.querySelector(divId);
-  selectedDiv.innerHTML = textToPrint;
-}
-
-const petBuilder = (petArr) => {
-  let domString = '';
-
-  // for (let i = 0; p.length; i++) {
-  petArr.forEach((p, i) => {
-    domString += `<div class="pet-card" style="width: 18rem;" id=${i}>
-    <div id="pets" class="d-flex flex-wrap justify-content-around"></div>
-      <div class="img-container" style="background-image: url('${p.imageUrl}');"></div>
-      <img src="${p.imageUrl}" alt="${p.name}">
-      <div class="card-body">
-        <h5 class="card-title">${p.name}</h5>
-        <p class="card-text">${p.color}</p>
-        <p class="card-text">${p.specialSkill}</p>
-        <p class="card-text">${p.type}</p>
-        <button type="button" value="submit" class="btn btn-danger" id="${i}">Submit</button>
-        <button type="button" class="btn btn-danger" id="${i}">Delete</button>
-      </div>
-    </div>`;
-  });
-  printToDom('#pets', domString);
+const petArray () => {
+  for (pet in pets) {
+    console.log(pets[pet]);
+  }
+  return
 };
-
-
-const handleButtonClick = (e) => {
-  const buttonId = (e.target.id);
-  if (buttonId === 'cat') {
-
-    document.querySelector('body').style.backgroundColor = 'lightblue';
-  } else if (buttonId === 'dog') {
-
-    document.querySelector('body').style.backgroundColor = 'skyblue';
-  } else if (buttonId === 'dino') {
-
-    document.querySelector('body').style.backgroundColor = '#808080';
-  } else if (buttonId == 'All') {
-
-    document.querySelector('body').style.backgroundColor = 'rgb(175, 196, 175)';
-  } else {
-
-    document.querySelector('body').style.backgroundColor = 'white';
-  }
-  const selectedPets = [];
-
-  for (let i = 0; i < pets.length; i++) {
-    if (pets[i].type === buttonId) {
-      selectedPets.push(pets[i]);
-    }
-  }
-  if (buttonId === 'All') {
-    petBuilder(pets);
-  } else {
-    petBuilder(selectedPets);
-  }
-}
-
-const buttonEvents = () => {
-  document.querySelector('#All').addEventListener('click', handleButtonClick);
-  document.querySelector('#cat').addEventListener('click', handleButtonClick);
-  document.querySelector('#dog').addEventListener('click', handleButtonClick);
-  document.querySelector('#dino').addEventListener('click', handleButtonClick);
-}
-
-const init = () => {
-  buttonEvents();
-  petBuilder(pets);
-};
-
-init();
