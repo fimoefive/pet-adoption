@@ -1,4 +1,4 @@
-const pets = [
+const petsArray = [
   {
     name: "Dusty",
     color: "Green",
@@ -211,9 +211,4 @@ const pets = [
   }
 ];
 
-const petArray () => {
-  for (pet in pets) {
-    console.log(pets[pet]);
-  }
-  return
-};
+export default petsArray 

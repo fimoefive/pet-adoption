@@ -1,3 +1,14 @@
-/* body {
+body {
   background-color: rgb(173, 119, 38);
-} */
+}
+header {
+  text-align: center;
+  font-size: 50px;
+  font-style: bolder;
+}
+
+.buttons {
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
+}
