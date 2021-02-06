@@ -211,4 +211,7 @@ const petsArray = [
   }
 ];
 
-export default petsArray 
+const getPets = () => {
+  return petsArray;
+}
+export { petsArray, getPets };
