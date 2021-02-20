@@ -1,8 +1,13 @@
 # Adoption Website
 
-## Setup
-* Clone this repo to your exercises directory
-* Create a setup branch and push up the usual stuff
-* Review the [Instructions](instructions.md)
+## FEATURES:
 
-# UPDATE THIS README WHEN THE ASSIGNMENT IS COMPLETED
+## VIDEO DEMO:
+
+## LINKS:
+#### Repo: https://github.com/fimoefive/pet-adoption
+#### Netlify link: https://mjs-pet-adoption.netlify.app
+
+## CONTRIBUTOR: https://github.com/fimoefive
+
+## SCREENSHOTS:
